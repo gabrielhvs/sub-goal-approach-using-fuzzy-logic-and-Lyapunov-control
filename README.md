@@ -1,1 +1,1 @@
-# -sub-goal-approach-using-fuzzy-logic-and-Lyapunov-control
+# sub-goal-approach-using-fuzzy-logic-and-Lyapunov-control
