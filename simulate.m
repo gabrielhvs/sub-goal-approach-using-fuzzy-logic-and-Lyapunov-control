@@ -10,6 +10,7 @@ gamma = 0.3; k = 1; % Parâmetros do controlador não-linear (Lyapunov)
 
 %% Controlador Fuzzy
 Tracking = readfis('Tracking');
+Obstacle = readfis('Obstacle2');
 
 %% Simulação
-out = sim('model_R2020a');
+out = sim('model_R2019b');
