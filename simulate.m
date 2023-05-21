@@ -17,3 +17,7 @@ DeadLock = readfis('DeadLock');
 Fuzzy_Behavior = readfis('Fuzzy_Behavior');
 %% Simulação
 out = sim('model_backward');
+plotMap
+
+figname = input("Figure name (map): ","s");
+saveas(fig,['Images/',figname,'.jpg']);

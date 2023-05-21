@@ -13,7 +13,7 @@ while true
     wall = [wall,handle]; i = i + 1;
 end
 
-fig = figure('Name','Map');
+fig = figure('Name','Map',Position=[50,20,850,850]);
 for i = 1:numel(wall)
     pos = sim.getObjectPosition(wall(i),-1);
     ori = sim.getObjectOrientation(wall(i),-1);
@@ -26,7 +26,7 @@ for i = 1:numel(wall)
     plot(polygon,FaceColor='k',EdgeColor='none'); hold on;
 end
 
-plotTraj(fig,poseR,'k');
+plotTraj(fig,out.poseR,'r');
 axis equal; xlim([0 10]); ylim([0 10]); grid off;
 
 %%
@@ -51,13 +51,15 @@ if isempty(ax) || ~isvalid(ax) || isempty(fig.CurrentAxes)
 end
 
 plot(ax,x,y,'--',Color=color);
-plot(ax,x(end),y(end),'ko',MarkerFaceColor='k');
+plot(ax,x(1),y(1),'ko',MarkerFaceColor='b',MarkerSize=10);
+plot(ax,x(end),y(end),'ko',MarkerFaceColor='r',MarkerSize=10);
 
-r = polyshape([-0.05 -0.05 0.1],[-0.05 0.05 0]);
+r = polyshape([-0.1 -0.1 0.13],[-0.1 0.1 0]);
 L = length(x);
 
 for i = 1:floor(L/10):L
-    if(i < ceil(3*L/5))
+    if sqrt((x(1)-x(i))^2 + (y(1)-y(i))^2) > 0.15 &&...
+            sqrt((x(end)-x(i))^2 + (y(end)-y(i))^2) > 0.15
         r1 = translate(rotate(r,(180/pi)*phi(i)),[x(i), y(i)]);
         plot(ax,r1,FaceColor=color);
     end
