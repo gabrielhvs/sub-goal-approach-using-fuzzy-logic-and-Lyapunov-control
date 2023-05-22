@@ -99,11 +99,11 @@ MF3='F':'trapmf',[1 1.5 3.5 4]
 
 [Output1]
 Name='e'
-Range=[0 13]
+Range=[0 3]
 NumMFs=3
-MF1='S':'gaussmf',[2.76 1.203e-16]
-MF2='M':'gaussmf',[2.76 6.5]
-MF3='B':'gaussmf',[2.76 13]
+MF1='S':'gaussmf',[0.6369 2.776e-17]
+MF2='M':'gaussmf',[0.6369 1.5]
+MF3='B':'gaussmf',[0.6369 3]
 
 [Output2]
 Name='alpha'
