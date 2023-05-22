@@ -51,8 +51,8 @@ if isempty(ax) || ~isvalid(ax) || isempty(fig.CurrentAxes)
 end
 
 plot(ax,x,y,'--',Color=color);
-plot(ax,x(1),y(1),'ko',MarkerFaceColor='b',MarkerSize=10);
-plot(ax,x(end),y(end),'ko',MarkerFaceColor='r',MarkerSize=10);
+plot(ax,x(1),y(1),'ko',MarkerFaceColor='k',MarkerSize=10);
+plot(ax,x(end),y(end),'ko',MarkerFaceColor='g',MarkerSize=10);
 
 r = polyshape([-0.1 -0.1 0.13],[-0.1 0.1 0]);
 L = length(x);
