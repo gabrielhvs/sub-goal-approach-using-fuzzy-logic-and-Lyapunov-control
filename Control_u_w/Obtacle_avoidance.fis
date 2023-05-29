@@ -1,0 +1,65 @@
+[System]
+Name='Obtacle_avoidance'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='DF'
+Range=[0 3]
+NumMFs=3
+MF1='Small':'trapmf',[-1.121 -0.1217 0.75 1.5]
+MF2='Medium':'trimf',[0.75 1.5 2.25]
+MF3='Large':'trapmf',[1.5 2.25 3.125 4.127]
+
+[Input2]
+Name='DR'
+Range=[0 3]
+NumMFs=3
+MF1='Small':'trapmf',[-1.125 -0.125 0.75 1.5]
+MF2='Medium':'trimf',[0.75 1.5 2.25]
+MF3='Large':'trapmf',[1.5 2.25 3.125 4.125]
+
+[Input3]
+Name='DL'
+Range=[0 3]
+NumMFs=3
+MF1='Small':'trapmf',[-1.125 -0.125 0.75 1.5]
+MF2='Medium':'trimf',[0.75 1.5 2.25]
+MF3='Large':'trapmf',[1.5 2.25 3 4.05]
+
+[Output1]
+Name='V0'
+Range=[0 1]
+NumMFs=3
+MF1='Slow':'trimf',[-0.417 0 0.5]
+MF2='Medium':'trimf',[0 0.5 1]
+MF3='Fast':'trimf',[0.5 1 1.417]
+
+[Output2]
+Name='W0'
+Range=[-5 5]
+NumMFs=7
+MF1='LB':'trimf',[-5 -5 -1.875]
+MF2='LM':'trimf',[-2.812 -1.875 -0.9375]
+MF3='LS':'trimf',[-1.875 -0.9375 0]
+MF4='ZE':'trimf',[-0.9375 0 0.9375]
+MF5='RS':'trimf',[0 0.9375 1.875]
+MF6='RM':'trimf',[0.9375 1.875 2.812]
+MF7='RB':'trimf',[1.875 5 5]
+
+[Rules]
+1 3 1, 1 7 (1) : 1
+1 1 3, 1 1 (1) : 1
+1 3 3, 1 1 (1) : 1
+1 3 2, 1 7 (1) : 1
+1 2 3, 1 1 (1) : 1
+1 2 1, 1 7 (1) : 1
+1 1 2, 1 1 (1) : 1
