@@ -40,7 +40,7 @@
 -->
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=4000&pause=5000&background=FFFFFF00&center=true&vCenter=true&multiline=true&width=900&lines= Sub-goal approach using fuzzy-logic and Lyapunov control">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=4000&pause=5000&background=FFFFFF00&center=true&vCenter=true&multiline=true&width=900&lines=Sub-goal-approach-using-fuzzy-logic-and-Lyapunov-control">
 </div>
 
 
